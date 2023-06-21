@@ -14,6 +14,11 @@
   },
   "scripts": {
     "start": "cds run",
+    "build": "npx mbt build",
+    "app": "npm start --prefix app",
+    "app:run": "cds bind --exec npm run app",
+    "watch-hybrid": "cds watch --profile hybrid",
+    "deploy": "cf deploy mta_archives/cap-bookshop-demo_1.0.0.mtar",
     "h-deploy": "cds deploy --to hana:CAPHANAFE-dev",
     "watch-fe-bookshop": "cds watch --open fe-bookshop/webapp/index.html?sap-ui-xx-viewCache=false"
   },
